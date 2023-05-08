@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial102_1301204039/myapp11_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -159,7 +160,22 @@ class _MyHomePageState extends State<MyHomePage> {
                         SizedBox(height: 10)
                       ]
                     );
-                  }),
+                  }
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                child: InkWell(
+                  child: Text('Go to Tutorial 11-1', style: TextStyle(
+                    color: Colors.indigo,
+                    fontSize: 26)
+                  ),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => const MyApp11_1()
+                    ));
+                  },
+                ),
               )
             ],
           ),
