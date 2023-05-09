@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial102_1301204039/myapp11_1.dart';
+import 'package:tutorial102_1301204039/tutorial_11-1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -62,47 +62,50 @@ class _MyHomePageState extends State<MyHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
-                        Text('Welcome', style: TextStyle(
-                          color: Color(0xFF7367F0),
-                          fontSize: 28,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 0.25)
-                        ),
-                        Text('1301204039 - Tiara Firdausa Abdillah', style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xFF4B4B4B))
-                        ),
+                        Text('Welcome',
+                            style: TextStyle(
+                                color: Color(0xFF7367F0),
+                                fontSize: 28,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.25)),
+                        Text('1301204039 - Tiara Firdausa Abdillah',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xFF4B4B4B))),
                       ],
                     ),
                     const CircleAvatar(
                       radius: 20,
                       // backgroundImage: AssetImage('assets/profpic.png'),
-                  )
+                    )
                   ],
                 ),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 35),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 35),
                 decoration: BoxDecoration(
-                  gradient: 
-                  const LinearGradient(colors:[Color(0xFF4839EB), Color(0xFF7367F0)]),
+                  gradient: const LinearGradient(
+                      colors: [Color(0xFF4839EB), Color(0xFF7367F0)]),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: 20),
-                    Text('Status tes TOEFL Anda: ', style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14),
+                    Text(
+                      'Status tes TOEFL Anda: ',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
                     SizedBox(height: 8),
-                    Text('LULUS', style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 28,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 0.25),
+                    Text(
+                      'LULUS',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.25),
                     ),
                     SizedBox(height: 20),
                     Container(
@@ -110,17 +113,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          Text('listening\n 80', style: TextStyle(
-                            color: Colors.white, 
-                            fontSize: 16),
+                          Text(
+                            'listening\n 80',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
-                          Text('Structure\n 80', style: TextStyle(
-                            color: Colors.white, 
-                            fontSize: 16),
+                          Text(
+                            'Structure\n 80',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
-                          Text('Reading\n 90', style: TextStyle(
-                            color: Colors.white, 
-                            fontSize: 16),
+                          Text(
+                            'Reading\n 90',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -130,50 +133,49 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
-                child: Text("Riwayat Tes", style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 28,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 0.25))
-              ),
+                  child: Text("Riwayat Tes",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 28,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.25))),
               Container(
                 height: 300,
                 child: ListView.builder(
-                  itemCount: data.length,
-                  itemBuilder: (context, index){
-                    return Column(
-                      children: [
+                    itemCount: data.length,
+                    itemBuilder: (context, index) {
+                      return Column(children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text('Tanggal tes:\nNilai: ', style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 20),
+                            Text(
+                              'Tanggal tes:\nNilai: ',
+                              style:
+                                  TextStyle(color: Colors.blue, fontSize: 20),
                             ),
-                            Text(data[index]["tgl"]! + '\n' + data[index]["nilai"]!,
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 20),
+                            Text(
+                              data[index]["tgl"]! +
+                                  '\n' +
+                                  data[index]["nilai"]!,
+                              style:
+                                  TextStyle(color: Colors.blue, fontSize: 20),
                             ),
                           ],
                         ),
                         SizedBox(height: 10)
-                      ]
-                    );
-                  }
-                ),
+                      ]);
+                    }),
               ),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 30),
                 child: InkWell(
-                  child: Text('Go to Tutorial 11-1', style: TextStyle(
-                    color: Colors.indigo,
-                    fontSize: 26)
-                  ),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => const MyApp11_1()
-                    ));
+                  child: Text('Go to Tutorial 11-1',
+                      style: TextStyle(color: Colors.indigo, fontSize: 26)),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyApp11_1()));
                   },
                 ),
               )
