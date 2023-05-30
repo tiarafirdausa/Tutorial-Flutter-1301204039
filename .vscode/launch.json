@@ -5,9 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "tutorial12_1301204039",
+      "program": "lib/tutorial12_1301204039.dart",
+      "type": "dart"
+    },
+    {
       "name": "tutorial102_1301204039",
       "request": "launch",
-      "program": "lib/tutorial_12.dart",
       "type": "dart"
     },
     {
